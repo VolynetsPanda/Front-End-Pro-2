@@ -44,11 +44,98 @@
 //     }
 // }
 // time()
-const list = document.querySelectorAll('.link')
-list.forEach((elem) => {
-    console.log(elem)
-})
-console.log(list)
+// const list = document.querySelectorAll('.link')
+// list.forEach((elem) => {
+//     console.log(elem)
+// })
+// console.log(list)
+const user = [
+    {
+        name: 'Vasya',
+        age: 10,
+        gender: true
+    },
+    {
+        name: 'Anyi',
+        age: 30,
+        gender: false
+    },
+    {
+        name: 'Petya',
+        age: 100,
+        gender: true
+    },
+    {
+        name: 'Masha',
+        age: 33,
+        gender: false
+    },
+]
+const root = document.getElementById('root')
+const show = (e) => {
+    e.stopPropagation()
+    e.preventDefault()
+    console.log('testing [target] => ', e.target.textContent.trim())
+}
+
+
+// user.forEach(elem => createFirstUsers(elem))
+// const createSecondUsers = ({title, price}) => {
+//     return `
+//         <li>
+//             <a href="#">
+//                 ${`${title} - ${price}`}
+//             </a>
+//         </li>
+//     `
+// }
+// const node = user.map(elem => createSecondUsers(elem))
+// root.innerHTML += node.join('')
+// document.addEventListener('click', (e) => {
+//     const _this = e.target
+//     if (_this.matches('a')){
+//         show(e)
+//     }
+// })
+// const api = async () => {
+//     try{
+//         const resp = await fetch('https://fakestoreapi.com/productst')
+//         console.log(resp)
+//         if(!resp.ok){
+//             throw new Error('errrrrrror')
+//         }
+//         const data = await resp.json()
+//         data.forEach(elem => createFirstUsers(elem))
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+// api()
+// fetch('https://fakestoreapi.com/products')
+//     .then(res=>res.json())
+//     .then(json => {
+//         console.log(json)
+//         json.forEach(elem => createFirstUsers(elem))
+//     })
+fetch('https://pokeapi.co/api/v2/pokemon/venusaur')
+    .then(res=>res.json())
+    .then(json => {
+        console.log(json)
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
