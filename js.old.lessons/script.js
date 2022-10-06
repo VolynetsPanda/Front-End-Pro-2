@@ -117,11 +117,11 @@ const show = (e) => {
 //         console.log(json)
 //         json.forEach(elem => createFirstUsers(elem))
 //     })
-fetch('https://pokeapi.co/api/v2/pokemon/venusaur')
-    .then(res=>res.json())
-    .then(json => {
-        console.log(json)
-    })
+// fetch('https://pokeapi.co/api/v2/pokemon/venusaur')
+//     .then(res=>res.json())
+//     .then(json => {
+//         console.log(json)
+//     })
 
 
 
