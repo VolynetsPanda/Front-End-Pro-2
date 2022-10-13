@@ -1,5 +1,4 @@
 import 'styles/all'
-console.log('2222')
 import { api } from "helpers/api";
 import moment from "moment";
 import Slider from "components/Slider";
@@ -31,6 +30,5 @@ import { onLocation } from "helpers/route";
 // Promise.all([test(0), fetch2, test(60)])
 //     .then(res => console.log(res))
 Header()
-console.log('3333')
 onLocation()
 
