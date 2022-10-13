@@ -3,6 +3,7 @@ import { handleRoute } from "helpers/route"
 import { listMenu } from "helpers/constants"
 
 const Header = () => {
+    console.log('Header')
     const append = document.body
     const nav = document.createElement('nav')
     const ul = document.createElement('ul')
