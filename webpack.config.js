@@ -23,32 +23,22 @@ module.exports = {
                 use: ["babel-loader"],
             },
             {
+                test: /\.(png|svg|jpg|jpeg|gif|ttf|eot|woff|woff2)$/i,
+                type: 'asset/resource',
+            },
+            {
                 test: /\.s(a|c)ss$/,
                 exclude: /node_modules/,
                 use: [
                     production ? MiniCssExtractPlugin.loader : 'style-loader',
                     {
                         loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            sourceMap: !production
-                        }
                     },
                     {
                         loader: 'sass-loader',
-                        options: {
-                            sourceMap: !production
-                        }
                     }
                 ]
             },
-            {
-                test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/, // for fonts and images
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name].[ext]'
-                }
-            }
         ]
     },
     resolve: {
@@ -58,6 +48,7 @@ module.exports = {
             "components": path.resolve(__dirname, "src/components"),
             "helpers": path.resolve(__dirname, "src/helpers"),
             "styles": path.resolve(__dirname, "src/styles"),
+            "views": path.resolve(__dirname, "src/views"),
         }
     },
     plugins: [
