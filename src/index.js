@@ -2,8 +2,9 @@ import 'styles/all'
 import { api } from "helpers/api";
 import moment from "moment";
 import Slider from "components/Slider";
-import Header from "components/Header";
-import { onLocation } from "helpers/route";
+import Game from "components/Game";
+// import Header from "components/Header";
+// import { onLocation } from "helpers/route";
 // import {MDCSlider} from '@material/slider';
 // import {MDCChipSet} from '@material/chips';
 // import Chips from "components/Chips";
@@ -29,7 +30,8 @@ import { onLocation } from "helpers/route";
 //     .then(res => res.json())
 // Promise.all([test(0), fetch2, test(60)])
 //     .then(res => console.log(res))
-Header()
-onLocation()
-console.log('test new branch')
+// Header()
+// onLocation()
+// console.log('test new branch')
+new Game().start()
 
